@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: #181818;
+
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    width: 90vh;
+    border-radius: 50px;
+    background: linear-gradient(
+        to bottom right, 
+        #f4ece3, 
+        #efe7d0, 
+        #e1e4c0, 
+        #cbe3b6, 
+        #ade2b3, 
+        #98dfb4, 
+        #80dbb6, 
+        #65d7bb, 
+        #5ad0b9, 
+        #50c8b7, 
+        #46c1b5, 
+        #3db9b2, 
+        #339fa8, 
+        #2d859d 
+    );
+
+    box-shadow: 3px 3px 100px rgba(45, 146, 204, 0.4);
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fafafa;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in-out;
+    border: 2px solid #181818;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+    transition: flex 0.7s ease-in-out;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    text-shadow:
+        -1px -1px 0 #000, /* Top left */
+         1px -1px 0 #000, /* Top right */
+        -1px  1px 0 #000, /* Bottom left */
+         1px  1px 0 #000, /* Bottom right */
+         4px 4px 5px rgba(0, 0, 0, 0.5); /* Shadow */
+    transition: 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5),
+    .panel:nth-of-type(6) {
+        display: none;
+    }
+}
