@@ -122,14 +122,41 @@ body {
     transition: 0.3s ease-in 0.4s;
 }
 
-@media(max-width: 480px) {
-    .container {
-        width: 100vw;
+
+
+@media (max-width: 1024px) {
+    .panel {
+        height: 70vh;
+        font-size: 16px;
     }
 
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5),
-    .panel:nth-of-type(6) {
-        display: none;
+    body {
+        place-content: center;
+    }
+    .container {
+        width: 90vw;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel {
+        height: 60vh;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel {
+        height: 50vh;
+        font-size: 16px;
+    }
+
+    body {
+        place-content: center;
+    }
+    .container {
+        width: 90vw;
+        border-radius: 30px;
     }
 }
