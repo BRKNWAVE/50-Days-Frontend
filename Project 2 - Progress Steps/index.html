@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Progress Steps</title>
+</head>
+<body>
+    <div class="container">
+        <div id="title">
+            <h1>4 Steps to Solving Software Problems</h1>
+        </div>
+        <div class="card-container">
+            <div class="card active">
+                <img src="./img/Understand.png" alt="Avatar" style="width:100%">
+                <div class="steps-container">
+                    <div class="step">
+                        <p>Step 1: <br><br> Understand the Problem</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/Plan.png" alt="Avatar" style="width:100%">
+                <div class="steps-container">
+                    <div class="step">
+                        <p>Step 2: <br><br> Create a Plan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/Implement.png" alt="Avatar" style="width:100%">
+                <div class="steps-container">
+                    <div class="step">
+                        <p>Step 3: <br><br> Implement the Plan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/test.png" alt="Avatar" style="width:100%">
+                <div class="steps-container">
+                    <div class="step">
+                        <p>Step 4: <br><br> Test Your Solution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="step">
+                <div class="circle active">1</div>
+            </div>
+            <div class="step">
+                <div class="circle">2</div>
+            </div>
+            <div class="step">
+                <div class="circle">3</div>
+            </div>
+            <div class="step">
+                <div class="circle">4</div>
+            </div>
+            <div class="progress" id="progress"></div>
+        </div>
+        <div class="buttons-container">
+            <button class="btn" id="prev" disabled>Prev</button>
+            <button class="btn" id="next">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
